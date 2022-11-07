@@ -1,0 +1,67 @@
+ /* position: relative; changes the position of the element relative to the parent element */
+body{
+    display: flex;
+    justify-content: center;
+    padding: 10%;
+}
+
+#carousel-container{
+    border: solid 2px orange;
+    position: relative;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;    
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    /* any content which overflows from the carousel-container is made invisible */
+}
+
+ #carousel-container ul{
+    position: relative;
+    height: 100%;
+    width: 10000%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    right:0;
+    border: solid 2px blue;
+    transition: left 1s;
+    /* sets a period of 1s when changes are made to left property */
+}
+
+#carousel-container ul li{
+    position: relative;
+    height: 100%;
+    float: left;
+    /* specifies the element floats to the left */
+    border: solid px rgb(202, 69, 202);
+}
+    
+    
+#carousel-container ul li img{
+    width: 500px;
+    height: 300px;
+}
+
+
+#carousel-container #previous, #carousel-container #next{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%
+}
+
+#carousel-container #previous {
+    left: 5px;
+    border: solid 2px red;
+}
+
+#carousel-container #next{
+    right: 5px;
+    border: solid 2px blue;
+
+}
+
+#carousel-container #previous:hover, #carousel-container #next:hover{
+    background-color: black;
+}
