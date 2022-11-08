@@ -44,19 +44,19 @@ body{
 }
 
 
-#carousel-container #previous, #carousel-container #next{
+#previous, #next{
     width: 20px;
     height: 20px;
     position: absolute;
     top: 50%
 }
 
-#carousel-container #previous {
+#previous {
     left: 5px;
     border: solid 2px red;
 }
 
-#carousel-container #next{
+#next{
     right: 5px;
     border: solid 2px blue;
 

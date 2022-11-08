@@ -28,6 +28,12 @@
                 console.log(newLeft);
                 imagePosition++; //increments (increases) imagePosition with each onclick 
         
+                if (newLeft === ("-2000px")){
+                    console.log("hello");
+                    newLeft = ("0px");
+                    imageList.style.left = newLeft;
+                    imagePosition = 1;
+                 } 
              
         }
         }
@@ -43,13 +49,11 @@
     setInterval(function(){nextImage()}, 3000)
     
 
-        function returnToFirstImage(){ 
+      
             
-            if (newLeft === "2000px"){
-            console.log("hello");
-         } 
+           
         
-        }
+        
 
         // if (imagePosition === 5) {
         //     console.log("hello")
