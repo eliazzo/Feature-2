@@ -28,12 +28,15 @@
                 console.log(newLeft);
                 imagePosition++; //increments (increases) imagePosition with each onclick 
         
-                if (newLeft === ("-2000px")){
+                if (newLeft === ("-2500px")){ //if the css left property is at its limit (-2500px)
                     console.log("hello");
-                    newLeft = ("0px");
-                    imageList.style.left = newLeft;
-                    imagePosition = 1;
+                    newLeft = ("0px"); // set the css left property variable to 0px
+                    imageList.style.left = newLeft; // set the property variable equal to the left property itself
+                    imagePosition = 1; // return the imagePosition to 1 (the first image)
                  } 
+
+                 const displayImagePosition = document.getElementById("position") // selects "position" p element
+                 displayImagePosition.innerHTML = imagePosition // sets innerHTML of "position" p element to imagePosition
              
         }
         }
@@ -43,18 +46,23 @@
               imageList.style.left =  parseInt(imageList.style.left) + 500 + "px"; // changes the css left property value
               imagePosition--; //decreases imagePosition with each onlick
             }
+
+            const displayImagePosition = document.getElementById("position") // selects "position" p element
+                 displayImagePosition.innerHTML = imagePosition // sets innerHTML of "position" p element to imagePosition
         }
     
     
-    setInterval(function(){nextImage()}, 3000)
+    setInterval(function(){nextImage()}, 4000); //automatically changes the image every 4 seconds
+
+    
+
+
+    
+       
+    
     
 
       
             
            
         
-        
-
-        // if (imagePosition === 5) {
-        //     console.log("hello")
-        // }
