@@ -6,12 +6,11 @@ body{
 }
 
 #carousel-container{
-    border: solid 2px orange;
     position: relative;
     width: 500px;
     height: 300px;
     overflow: hidden;    
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
     /* any content which overflows from the carousel-container is made invisible */
 }
 
@@ -24,8 +23,7 @@ body{
     margin: 0;
     left: 0;
     right:0;
-    border: solid 2px blue;
-    transition: left 1s;
+    transition: left 2s;
     /* sets a period of 1s when changes are made to left property */
 }
 
@@ -33,8 +31,7 @@ body{
     position: relative;
     height: 100%;
     float: left;
-    /* specifies the element floats to the left */
-    border: solid px rgb(202, 69, 202);
+    /* specifies the li elements float to the left */
 }
     
     
@@ -45,23 +42,36 @@ body{
 
 
 #previous, #next{
-    width: 20px;
-    height: 20px;
     position: absolute;
-    top: 50%
+    top: 50%;
+    width: 50px;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    font-size: 2rem;
+    /* rem - relative to root element  */
+    border: none;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.5);
 }
 
-#previous {
-    left: 5px;
-    border: solid 2px red;
+#carousel-container #previous {
+    left: 10px;
 }
 
-#next{
-    right: 5px;
-    border: solid 2px blue;
+#carousel-container #next{
+    right: 10px;
+
 
 }
 
 #carousel-container #previous:hover, #carousel-container #next:hover{
-    background-color: black;
+    color: white;
+}
+
+#position-label{
+    display: flex;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    font-family: Arial, Helvetica, sans-serif;
 }

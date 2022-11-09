@@ -10,23 +10,29 @@
 </head>
 <body>
 
-    <button id="previous" onclick="previousImage()"></button>
- <div id="carousel-container">
+<div id="page-container">  
+    <div id="carousel-container">
         <ul id="image-list">
-            <li><img src="Seville 1.JPG"></li>
-            <li><img src="Seville 2.JPG"></li>
-            <li><img src="Seville 3.JPG"></li>
-            <li><img src="Seville 4.JPG"></li>
-            <li><img src="Seville 5.JPG"></li>
+            <li><img src="splash.png"></li>
+            <li><img src="lawn.png"></li>
+            <li><img src="rubber ring.png"></li>
+            <li><img src="umbrella.png"></li>
+            <li><img src="santa monica.png"></li>
+            <li><img src="garrowby hill.png"></li>
         </ul>
-    
-    
+
+        <button id="previous" onclick="previousImage()"><<</button>   
+        <button id="next" onclick="nextImage()">>></button>
         
-    
-
-    <div class="dots"></div>
+        
+    </div>
+    <div id="position-label">
+        <p id="position">1</p>
+        <p>/6</p>
+    </div>
 </div>
-        <button id="next" onclick="nextImage()"></button>
 
+<!-- <div class="dots"></div> -->
+        
 </body>
 </html>
