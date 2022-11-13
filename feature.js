@@ -28,7 +28,7 @@
                 console.log(newLeft);
                 imagePosition++; //increments (increases) imagePosition with each onclick 
         
-                if (newLeft === ("-2500px")){ //if the css left property is at its limit (-2500px)
+                if (newLeft === ("-3500px")){ //if the css left property is at its limit (-2500px)
                     console.log("hello");
                     newLeft = ("0px"); // set the css left property variable to 0px
                     imageList.style.left = newLeft; // set the property variable equal to the left property itself
