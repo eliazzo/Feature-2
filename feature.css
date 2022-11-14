@@ -1,5 +1,9 @@
  /* position: relative; changes the position of the element relative to the parent element */
-body{
+ html{
+    scroll-behavior: smooth;
+}
+
+ body{
     display: flex;
     justify-content: center;
     padding: 10%;
@@ -8,7 +12,7 @@ body{
 #carousel-container{
     position: relative;
     width: 500px;
-    height: 300px;
+    height: 400px;
     overflow: hidden;    
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
     /* any content which overflows from the carousel-container is made invisible */
@@ -37,7 +41,8 @@ body{
     
 #carousel-container ul li img{
     width: 500px;
-    height: 300px;
+    height: 400px; 
+
 }
 
 
@@ -45,13 +50,15 @@ body{
     position: absolute;
     top: 50%;
     width: 50px;
+    height: 50px;
     text-align: center;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-    font-size: 2rem;
+    font-size: 1rem;
     /* rem - relative to root element  */
     border: none;
     background-color: transparent;
-    color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 25px;
 }
 
 #carousel-container #previous {
@@ -65,13 +72,13 @@ body{
 }
 
 #carousel-container #previous:hover, #carousel-container #next:hover{
-    color: white;
+    background-color: rgba(0,0,0,0.8);
 }
 
-#position-label{
+#position-label, #image-description{
     display: flex;
     justify-content: center;
     color: rgba(0, 0, 0, 0.5);
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    /* text-shadow: 0 0 20px rgba(0, 0, 0, 0.6); */
     font-family: Arial, Helvetica, sans-serif;
 }
