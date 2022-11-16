@@ -8,6 +8,8 @@
         
     const nextButton = document.getElementById("next"); //selects the "next" button
     const previousButton = document.getElementById("previous"); //selects the "previous" button
+
+
     imageList.style.left = 0 // sets the css left property to 0
 
 
@@ -19,39 +21,64 @@
                     console.log(newLeft);
                     imagePosition++; //increments (increases) imagePosition with each onclick 
         
-                if (newLeft === ("-2500px")){ //if the new css left property is at its limit (-2500px)
-                        console.log("hello");
+                
+    // Setting the image carousel to return to the first image when it reaches the end of the slideshow 
+                                    
+                    newLeft = parseInt(imageList.style.left);
+                    console.log(newLeft);
+
+                    if (newLeft <= -2500){
+                        console.log("hello") //if the new css left property is at its limit (-2500px)
                         newLeft = ("0px"); // set the  newLeft property variable to it's original, 0px
                         imageList.style.left = newLeft; // set the newLeft property variable equal to the css left property 
                         imagePosition = 1; // return the imagePosition to 1 (the first image)
-                 } 
+                } 
 
-                 const displayImagePosition = document.getElementById("position") // selects "position" p element
-                 displayImagePosition.innerText = imagePosition // sets innerHTML of "position" p element to imagePosition
+                // if (imagePosition === 6){
+                //     console.log("hello");
+                //     imageList.style.left = ("0px")
+                // }
+
+    // Displaying the image position beneath the image carousel 
+
+                        const displayImagePosition = document.getElementById("position") // selects "position" p element
+                        displayImagePosition.innerText = imagePosition // sets innerHTML of "position" p element to imagePosition
              
-            }
+                }
 
-            // applying the description
-            const imageDescriptionElement = document.getElementById("description") // selects the "description" p element
-            if(imagePosition === 1){
-                imageDescriptionElement.innerText = "A Bigger Splash 1967";
-            }
-            if(imagePosition === 2){
-                imageDescriptionElement.innerText = "Rubber Ring Floating In a Swimming Pool 1971";
-            }
-            if(imagePosition === 3){
-                imageDescriptionElement.innerText = "Garden #3 2016";
-            }
-            if(imagePosition === 4){
-                imageDescriptionElement.innerText = "A Lawn Being Sprinkled 1967";
-            }
-            if(imagePosition === 5){
-                imageDescriptionElement.innerText = "Santa Monica Boulevard 1979";
-            }
-            if(imagePosition === 6){
-                imageDescriptionElement.innerText = "Garrowby Hill 1998"
-            }
-        }
+    
+    
+// Applying the description text to each image
+
+    // function displayDescription(){
+
+        const imageDescriptionElement = document.getElementById("description") // selects the "description" p element
+
+                    // if(imagePosition === 1){
+                    //     imageDescriptionElement.innerText = "A Bigger Splash 1967";
+                    // }
+
+                    // if ((imageList.style.left) = ("0px")){
+                    //     imageDescriptionElement.innerText = "A Bigger Splash 1967"; 
+                    // }
+
+                    if(imagePosition === 2){
+                        imageDescriptionElement.innerText = "Rubber Ring Floating In a Swimming Pool 1971";
+                    }
+                    if(imagePosition === 3){
+                        imageDescriptionElement.innerText = "Garden #3 2016";
+                    }
+                    if(imagePosition === 4){
+                        imageDescriptionElement.innerText = "A Lawn Being Sprinkled 1967";
+                    }
+                    if(imagePosition === 5){
+                        imageDescriptionElement.innerText = "Santa Monica Boulevard 1979";
+                    }
+                    if(imagePosition === 6){
+                        imageDescriptionElement.innerText = "Garrowby Hill 1998";
+                    }
+                }
+    // }
         
     function previousImage() {
             if(imagePosition > 1) { // run function if the imagePosition is greater than one
