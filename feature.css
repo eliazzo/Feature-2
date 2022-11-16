@@ -27,7 +27,7 @@
     margin: 0;
     left: 0;
     right:0;
-    transition: left 2s;
+    transition: left 1s;
     /* sets a period of 1s when changes are made to left property */
 }
 
@@ -71,7 +71,7 @@
 
 }
 
-#carousel-container #previous:hover, #carousel-container #next:hover{
+#carousel-container #previous:hover, #carousel-container #next:hover, #dots button:hover{
     background-color: rgba(0,0,0,0.8);
 }
 
@@ -82,3 +82,15 @@
     /* text-shadow: 0 0 20px rgba(0, 0, 0, 0.6); */
     font-family: Arial, Helvetica, sans-serif;
 }
+
+#dots {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+#dots button {
+    border-radius: 25px;
+    width: 20px;
+    height: 20px;
+}
+

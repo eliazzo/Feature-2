@@ -20,6 +20,24 @@
                     imageList.style.left = newLeft; // sets the css left property equal to the newLeft variable value
                     console.log(newLeft);
                     imagePosition++; //increments (increases) imagePosition with each onclick 
+
+     //Setting the dots to change colour when on the correct image
+
+     if (imagePosition === 2) {
+        document.getElementById("ring-button").style.backgroundColor = "red";
+    }
+    else {
+        document.getElementById("ring-button").style.backgroundColor = "white";
+    }
+    
+
+    if (imagePosition === 3) {
+        document.getElementById("garden-button").style.backgroundColor = "red";
+    }
+    else {
+        document.getElementById("garden-button").style.backgroundColor = "white";
+    }
+    
         
                 
     // Setting the image carousel to automatically return to first image when it reaches the end of the slideshow 
@@ -27,12 +45,14 @@
                     newLeft = parseInt(imageList.style.left);
                     console.log(newLeft);
 
-                    if (newLeft <= -2500){
+                    if (newLeft < -2500){
                         console.log("hello") //if the new css left property is at its limit (-2500px)
                         newLeft = ("0px"); // set the  newLeft property variable to it's original, 0px
                         imageList.style.left = newLeft; // set the newLeft property variable equal to the css left property 
                         imagePosition = 1; // return the imagePosition to 1 (the first image)
                 } 
+    
+
 
 
     // Displaying the image position beneath the image carousel 
@@ -48,7 +68,7 @@
 
     // function displayDescription(){
 
-        const imageDescriptionElement = document.getElementById("description") // selects the "description" p element
+ const imageDescriptionElement = document.getElementById("description") // selects the "description" p element
 
                     // if(imagePosition === 1){
                     //     imageDescriptionElement.innerText = "A Bigger Splash 1967";
@@ -82,7 +102,37 @@
                  displayImagePosition.innerText = imagePosition // sets innerHTML of "position" p element to imagePosition
         }
     
+
+// // Dots
+
+//First, redeclare the imageDescriptionElement and displayImagePosition variables 
+
+const imageDescriptionElement = document.getElementById("description") // selects the "description" p element
+const displayImagePosition = document.getElementById("position") // selects "position" p element
+
+function ringDot() {
     
+    imageList.style.left = ("-500px");
+    imagePosition = 2;
+    imageDescriptionElement.innerText = "Rubber Ring Floating In a Swimming Pool 1971";
+    displayImagePosition.innerText = imagePosition;
+    document.getElementById("ring-button").style.backgroundColor = "red";
+
+    
+}
+
+function gardenDot(){
+    imageList.style.left = ("-1000px");
+    imagePosition = 3;
+    imageDescriptionElement.innerText = "Garden #3 2016";
+    displayImagePosition.innerText = imagePosition;
+    document.getElementById("garden-button").style.backgroundColor = "red";
+
+}
+
+
+
+
     setInterval(function(){nextImage()}, 4000); //automatically changes the image every 4 seconds
 
 
