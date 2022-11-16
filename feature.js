@@ -22,7 +22,7 @@
                     imagePosition++; //increments (increases) imagePosition with each onclick 
         
                 
-    // Setting the image carousel to return to the first image when it reaches the end of the slideshow 
+    // Setting the image carousel to automatically return to first image when it reaches the end of the slideshow 
                                     
                     newLeft = parseInt(imageList.style.left);
                     console.log(newLeft);
@@ -34,10 +34,6 @@
                         imagePosition = 1; // return the imagePosition to 1 (the first image)
                 } 
 
-                // if (imagePosition === 6){
-                //     console.log("hello");
-                //     imageList.style.left = ("0px")
-                // }
 
     // Displaying the image position beneath the image carousel 
 
@@ -56,11 +52,7 @@
 
                     // if(imagePosition === 1){
                     //     imageDescriptionElement.innerText = "A Bigger Splash 1967";
-                    // }
-
-                    // if ((imageList.style.left) = ("0px")){
-                    //     imageDescriptionElement.innerText = "A Bigger Splash 1967"; 
-                    // }
+                    // } 
 
                     if(imagePosition === 2){
                         imageDescriptionElement.innerText = "Rubber Ring Floating In a Swimming Pool 1971";
