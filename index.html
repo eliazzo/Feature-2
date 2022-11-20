@@ -25,7 +25,6 @@
             <li><img src="lawn.png"></li>
             <li><img src="santa.png"></li>
             <li><img src="garrowby hill.png"></li>
-            <li></li>
         </ul>
 
         <button id="previous" onclick="previousImage()"><<</button>   
@@ -34,18 +33,23 @@
         
     </div>
 
-    <div id="dots">
-        <button id="splash-button"></button>
-        <button id="ring-button" onclick="ringDot()"></button>
-        <button id="garden-button" onclick="gardenDot()"></button>
-        <button id="lawn-button"></button>
-        <button id="santa-button"></button>
-        <button id="garrowby-button"></button>
+    <div id="dot-container">
+        <button id="splash-button" class="dots" onclick="splashPositionChange()"></button>
+        <button id="ring-button" class="dots" onclick="ringPositionChange()"></button>
+        <button id="garden-button" class="dots" onclick="gardenPositionChange()"></button>
+        <button id="lawn-button" class="dots" onclick="lawnPositionChange()"></button>
+        <button id="santa-button" class="dots" onclick="santaPositionChange()"></button>
+        <button id="garrowby-button" class="dots" onclick="garrowbyPositionChange()"></button>
     </div>
     
     <div id="image-description">
         <p id="description">A Bigger Splash 1967</p>
     </div> 
+
+    <div id="pause-play-buttons">
+        <button id="pause" onclick="pause()">II</button>
+        <button id="play" onclick="play()">&#9658</button>
+    </div>
 
 </div>
 

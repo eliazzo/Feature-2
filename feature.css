@@ -71,8 +71,9 @@
 
 }
 
-#carousel-container #previous:hover, #carousel-container #next:hover, #dots button:hover{
+#carousel-container #previous:hover, #carousel-container #next:hover, #dot-container button:hover, #pause-play-buttons button:hover{
     background-color: rgba(0,0,0,0.8);
+    opacity: 0.5;
 }
 
 #position-label, #image-description{
@@ -83,14 +84,35 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#dots {
-    text-align: center;
+#dot-container {
+    display: flex;
+    justify-content: center;
     padding: 20px 0px 20px 0px;
 }
 
-#dots button {
+#dot-container button {
+    background-color: white;
+    border: solid rgb(136, 126, 126) 1px;
     border-radius: 25px;
     width: 20px;
     height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: opacity 0.3s;
+}
+
+#pause-play-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+#pause-play-buttons button{
+    background-color: white;
+    border: solid rgb(136, 126, 126) 1px;
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
