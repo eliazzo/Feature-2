@@ -12,7 +12,7 @@
     imageList.style.left = 0 // sets the css left property to 0
     let imagePosition = 1; 
     const dotList = document.querySelectorAll(".dots");
-    dotList[0].style.backgroundColor = "red";
+    dotList[0].style.backgroundColor = "rgba(0,0,0,0.8)";
  
     // if (imageList.style.left = 0){
     //     imagePosition = 1; 
@@ -42,7 +42,7 @@
 
         for(let i = 0; i < dotList.length; i++){
         if (i === imagePosition - 1) {
-                    dotList[i].style.backgroundColor = "red";
+                    dotList[i].style.backgroundColor = "rgba(0,0,0,0.8)";
                 }   
             
         else {
@@ -83,36 +83,57 @@
 
                 }
 
-        
+// Previous image function
+
     function previousImage() {
-            if(imagePosition > 1) { // run function if the imagePosition is greater than one
+            
+         if(imagePosition > 1) { // run function if the imagePosition is greater than one
               imageList.style.left =  parseInt(imageList.style.left) + 500 + "px"; // changes the css left property value
               imagePosition--; //decreases imagePosition with each onlick
             }
 
-            else // resuse logic and 
+        else{
+            console.log("hello2") //if the new css left property is at its limit (-2500px)
+            const newLeft = ("-2500px"); // set the  newLeft property variable to it's original, 0px
+            imageList.style.left = newLeft; // set the newLeft property variable equal to the css left property 
+            imagePosition = 1; // return the imagePosition to 1 (the first image)
+        }
 
-            // reuse for loop for colours
+        // Reusing next image loop to set the dots to change colour depending on the image
+
+        for(let i = 0; i < dotList.length; i++){
+            if (i === imagePosition - 1) {
+                        dotList[i].style.backgroundColor = "rgba(0,0,0,0.8)";
+                    }   
+                
+        else {
+            dotList[i].style.backgroundColor = "white"
+            }
+        }   
 
 
-            if(imagePosition === 1){
-                imageDescriptionElement.innerText = "A Bigger Splash 1967";
+        if(imagePosition === 1){
+            imageDescriptionElement.innerText = "A Bigger Splash 1967";
             } 
 
-            if(imagePosition === 2){
-                imageDescriptionElement.innerText = "Rubber Ring Floating In a Swimming Pool 1971";
+        if(imagePosition === 2){
+            imageDescriptionElement.innerText = "Rubber Ring Floating In a Swimming Pool 1971";
             }
-            if(imagePosition === 3){
-                imageDescriptionElement.innerText = "Garden #3 2016";
+
+        if(imagePosition === 3){
+            imageDescriptionElement.innerText = "Garden #3 2016";
             }
-            if(imagePosition === 4){
-                imageDescriptionElement.innerText = "A Lawn Being Sprinkled 1967";
+
+        if(imagePosition === 4){
+            imageDescriptionElement.innerText = "A Lawn Being Sprinkled 1967";
             }
-            if(imagePosition === 5){
-                imageDescriptionElement.innerText = "Santa Monica Boulevard 1979";
+
+        if(imagePosition === 5){
+            imageDescriptionElement.innerText = "Santa Monica Boulevard 1979";
             }
-            if(imagePosition === 6){
-                imageDescriptionElement.innerText = "Garrowby Hill 1998";
+            
+        if(imagePosition === 6){
+            imageDescriptionElement.innerText = "Garrowby Hill 1998";
             }
 
         //displaying the image position number below the image
@@ -134,7 +155,7 @@ function splashPositionChange(){
             //final index ALWAYS = dotList.length - 1 // which is why we use < // i++ increase i by one after every loop
             if (i === imagePosition - 1){
                 console.log(dotList[i]);
-                dotList[i].style.backgroundColor = "red";
+                dotList[i].style.backgroundColor = "rgba(0,0,0,0.8)";
             }
             else {
                 dotList[i].style.backgroundColor = "white";
@@ -154,7 +175,7 @@ function ringPositionChange() {
             //final index ALWAYS = dotList.length - 1 // which is why we use < // i++ increase i by one after every loop
             if (i === imagePosition - 1){
                 console.log(dotList[i]);
-                dotList[i].style.backgroundColor = "red";
+                dotList[i].style.backgroundColor = "rgba(0,0,0,0.8)";
             }
             else {
                 dotList[i].style.backgroundColor = "white";
@@ -173,7 +194,7 @@ function gardenPositionChange(){
             //final index ALWAYS = dotList.length - 1 // which is why we use < // i++ increase i by one after every loop
             if (i === imagePosition - 1){
                 console.log(dotList[i]);
-                dotList[i].style.backgroundColor = "red";
+                dotList[i].style.backgroundColor = "rgba(0,0,0,0.8)";
             }
             else {
                 dotList[i].style.backgroundColor = "white";
@@ -193,7 +214,7 @@ function lawnPositionChange(){
             //final index ALWAYS = dotList.length - 1 // which is why we use < // i++ increase i by one after every loop
             if (i === imagePosition - 1){
                 console.log(dotList[i]);
-                dotList[i].style.backgroundColor = "red";
+                dotList[i].style.backgroundColor = "rgba(0,0,0,0.8)";
             }
             else {
                 dotList[i].style.backgroundColor = "white";
@@ -212,7 +233,7 @@ function santaPositionChange(){
             //final index ALWAYS = dotList.length - 1 // which is why we use < // i++ increase i by one after every loop
             if (i === imagePosition - 1){
                 console.log(dotList[i]);
-                dotList[i].style.backgroundColor = "red";
+                dotList[i].style.backgroundColor = "rgba(0,0,0,0.8)";
             }
             else {
                 dotList[i].style.backgroundColor = "white";
@@ -231,7 +252,7 @@ function garrowbyPositionChange(){
         //final index ALWAYS = dotList.length - 1 // which is why we use < // i++ increase i by one after every loop
         if (i === imagePosition - 1){
             console.log(dotList[i]);
-            dotList[i].style.backgroundColor = "red";
+            dotList[i].style.backgroundColor = "rgba(0,0,0,0.8)";
         }
         else {
             dotList[i].style.backgroundColor = "white";
@@ -242,17 +263,21 @@ function garrowbyPositionChange(){
 
 
 
+// Automatic play function 
 
 
-    let automaticPlay = setInterval(function(){nextImage()}, 5000); //automatically changes the image every 5 seconds
-    console.log(automaticPlay) // logs the ID which has been assigned to the automaticPlay variable - in this case, 1
-    function pause(){
+let automaticPlay = setInterval(function(){nextImage()}, 5000); //automatically changes the image every 5 seconds
+console.log(automaticPlay) // logs the ID which has been assigned to the automaticPlay variable - in this case, 1
+    
+// Pause button 
+function pause(){
         clearInterval(automaticPlay);
     
         automaticPlay = null; // removing the setInterval function from the automaticPlay variable and explictly sets this to 0
     }
 
-    function play(){
+// Play button
+function play(){
         automaticPlay = setInterval(function(){nextImage()}, 5000);
     }
 
