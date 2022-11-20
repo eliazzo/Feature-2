@@ -96,7 +96,7 @@
             console.log("hello2") //if the new css left property is at its limit (-2500px)
             const newLeft = ("-2500px"); // set the  newLeft property variable to it's original, 0px
             imageList.style.left = newLeft; // set the newLeft property variable equal to the css left property 
-            imagePosition = 1; // return the imagePosition to 1 (the first image)
+            imagePosition = 6; // return the imagePosition to 1 (the first image)
         }
 
         // Reusing next image loop to set the dots to change colour depending on the image
