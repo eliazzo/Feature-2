@@ -10,7 +10,7 @@ The nextImage and previousImage functions alter the css left property of the ima
 
 A setInterval function calls the nextImage function every 5 seconds.
 
-Screenshot 2022-11-27 at 18.07.10.png
+![Screenshot 2022-11-27 at 18 07 10](https://user-images.githubusercontent.com/114364165/204153054-4c02ae4f-35f0-4ca6-a37e-74bde3cb8911.png)
 
 ## Acknowledgments
 
