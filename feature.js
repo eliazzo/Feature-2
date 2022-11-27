@@ -152,7 +152,7 @@ function splashPositionChange(){
         displayImagePosition.innerText = imagePosition;
         
         for(let i = 0; i < dotList.length; i++){ //let i = 0 starting value // i < dotList.length condition checked every time the loop is completed // 
-            //final index ALWAYS = dotList.length - 1 // which is why we use < // i++ increase i by one after every loop
+            //final index ALWAYS = dotList.length - 1 because I have not used 0 index for imagePosition// which is why we use < // i++ increase i by one after every loop
             if (i === imagePosition - 1){
                 console.log(dotList[i]);
                 dotList[i].style.backgroundColor = "rgba(0,0,0,0.8)";
