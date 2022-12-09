@@ -9,6 +9,7 @@
 
     const imageDescriptionElement = document.getElementById("description") // selects the "description" p element
     const displayImagePosition = document.getElementById("position") // selects "position" p element
+    const textDescriptionArray = ["A Bigger Splash 1967", "Rubber Ring Floating In a Swimming Pool 1971", "Garden #3 2016", "A Lawn Being Sprinkled 1967", "Santa Monica Boulevard 1979", "Garrowby Hill 1998"];
 
 
     imageList.style.left = 0 // sets the css left property to 0
@@ -57,31 +58,28 @@
                         
 
     
-// Applying the description text to each image
- 
-                    if(imagePosition === 1){
-                        imageDescriptionElement.innerText = "A Bigger Splash 1967";
-                    } 
-
-                    if(imagePosition === 2){
-                        imageDescriptionElement.innerText = "Rubber Ring Floating In a Swimming Pool 1971";
-                    }
-                    if(imagePosition === 3){
-                        imageDescriptionElement.innerText = "Garden #3 2016";
-                    }
-                    if(imagePosition === 4){
-                        imageDescriptionElement.innerText = "A Lawn Being Sprinkled 1967";
-                    }
-                    if(imagePosition === 5){
-                        imageDescriptionElement.innerText = "Santa Monica Boulevard 1979";
-                    }
-                    if(imagePosition === 6){
-                        imageDescriptionElement.innerText = "Garrowby Hill 1998";
-                    }
-
-                    console.log(dotList[0].style);
-
-                
+// Displaying the description text beneath each image
+for (let i=0; i<textDescriptionArray.length; i++){
+    if(imagePosition === 1){
+        imageDescriptionElement.innerText = textDescriptionArray[0];
+        } 
+    if(imagePosition === 2){
+        imageDescriptionElement.innerText = textDescriptionArray[1];
+        }
+    if(imagePosition === 3){
+        imageDescriptionElement.innerText = textDescriptionArray[2];
+        }
+    if(imagePosition === 4){
+        imageDescriptionElement.innerText = textDescriptionArray[3];
+        }
+    if(imagePosition === 5){
+        imageDescriptionElement.innerText = textDescriptionArray[4];
+        }
+    if(imagePosition === 6){
+        imageDescriptionElement.innerText = textDescriptionArray[5];
+        }
+}
+     
         }
 
 // Previous image function
@@ -112,9 +110,8 @@
             }
         }   
 
-//Displaying text description
+// Displaying text description
 
-const textDescriptionArray = ["A Bigger Splash 1967", "Rubber Ring Floating In a Swimming Pool 1971", "Garden #3 2016", "A Lawn Being Sprinkled 1967", "Santa Monica Boulevard 1979", "Garrowby Hill 1998"];
 for (let i=0; i<textDescriptionArray.length; i++){
     if(imagePosition === 1){
         imageDescriptionElement.innerText = textDescriptionArray[0];
@@ -136,39 +133,12 @@ for (let i=0; i<textDescriptionArray.length; i++){
         }
 }
 
-        // if(imagePosition === 1){
-        //     imageDescriptionElement.innerText = "A Bigger Splash 1967";
-        //     } 
-
-        // if(imagePosition === 2){
-        //     imageDescriptionElement.innerText = "Rubber Ring Floating In a Swimming Pool 1971";
-        //     }
-
-        // if(imagePosition === 3){
-        //     imageDescriptionElement.innerText = "Garden #3 2016";
-        //     }
-
-        // if(imagePosition === 4){
-        //     imageDescriptionElement.innerText = "A Lawn Being Sprinkled 1967";
-        //     }
-
-        // if(imagePosition === 5){
-        //     imageDescriptionElement.innerText = "Santa Monica Boulevard 1979";
-        //     }
-            
-        // if(imagePosition === 6){
-        //     imageDescriptionElement.innerText = "Garrowby Hill 1998";
-        //     }
-
-        //displaying the image position number below the image
-                 displayImagePosition.innerText = imagePosition // sets innerHTML of "position" p element to imagePosition
-        }
+// Display image position number below the image
+    displayImagePosition.innerText = imagePosition // sets innerHTML of "position" p element to imagePosition
+}
     
         
-
-// // Dots onclick change to respective image 
-
-
+// Dots onclick change to respective image 
 function splashPositionChange(){
 
         imageList.style.left = ("0px");
