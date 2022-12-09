@@ -39,8 +39,7 @@
             imagePosition = 1; // return the imagePosition to 1 (the first image)
         }
         
-        // Setting the dots to change colour depending on the image
-
+// Setting the dots to change colour depending on the image
         for(let i = 0; i < dotList.length; i++){
         if (i === imagePosition - 1) {
                     dotList[i].style.backgroundColor = "rgba(0,0,0,0.8)";
@@ -50,16 +49,13 @@
             dotList[i].style.backgroundColor = "white"
             }
         }   
-
             
-        // Displaying the image position number beneath the image carousel 
-                     
+// Displaying the image position number above images        
         displayImagePosition.innerText = imagePosition // sets innerHTML of "position" p element to imagePosition
                         
-
     
 // Displaying the description text beneath each image
-for (let i=0; i<textDescriptionArray.length; i++){
+for (let i = 0; i < textDescriptionArray.length; i++){
     if(imagePosition === 1){
         imageDescriptionElement.innerText = textDescriptionArray[0];
         } 
@@ -112,7 +108,7 @@ for (let i=0; i<textDescriptionArray.length; i++){
 
 // Displaying text description
 
-for (let i=0; i<textDescriptionArray.length; i++){
+for (let i = 0; i< textDescriptionArray.length; i++){
     if(imagePosition === 1){
         imageDescriptionElement.innerText = textDescriptionArray[0];
         } 
@@ -143,7 +139,7 @@ function splashPositionChange(){
 
         imageList.style.left = ("0px");
         imagePosition = 1;
-        imageDescriptionElement.innerText = "A Bigger Splash 1967";
+        imageDescriptionElement.innerText = textDescriptionArray[0];
         displayImagePosition.innerText = imagePosition;
         
         for(let i = 0; i < dotList.length; i++){ //let i = 0 starting value // i < dotList.length condition checked every time the loop is completed // 
@@ -163,7 +159,7 @@ function ringPositionChange() {
     
         imageList.style.left = ("-500px");
         imagePosition = 2;
-        imageDescriptionElement.innerText = "Rubber Ring Floating In a Swimming Pool 1971";
+        imageDescriptionElement.innerText = textDescriptionArray[1];
         displayImagePosition.innerText = imagePosition;
 
         for(let i = 0; i < dotList.length; i++){ //let i = 0 starting value // i < dotList.length condition checked every time the loop is completed // 
@@ -182,7 +178,7 @@ function ringPositionChange() {
 function gardenPositionChange(){
         imageList.style.left = ("-1000px");
         imagePosition = 3;
-        imageDescriptionElement.innerText = "Garden #3 2016";
+        imageDescriptionElement.innerText = textDescriptionArray[2];
         displayImagePosition.innerText = imagePosition;
         
         for(let i = 0; i < dotList.length; i++){ //let i = 0 starting value // i < dotList.length condition checked every time the loop is completed // 
@@ -202,7 +198,7 @@ function gardenPositionChange(){
 function lawnPositionChange(){
         imageList.style.left = ("-1500px");
         imagePosition = 4;
-        imageDescriptionElement.innerText = "A Lawn Being Sprinkled 1967";
+        imageDescriptionElement.innerText = textDescriptionArray[3];
         displayImagePosition.innerText = imagePosition;
         
         for(let i = 0; i < dotList.length; i++){ //let i = 0 starting value // i < dotList.length condition checked every time the loop is completed // 
@@ -221,7 +217,7 @@ function lawnPositionChange(){
 function santaPositionChange(){
         imageList.style.left = ("-2000px");
         imagePosition = 5;
-        imageDescriptionElement.innerText = "Santa Monica Boulevard 1979";
+        imageDescriptionElement.innerText = textDescriptionArray[4];
         displayImagePosition.innerText = imagePosition;
         
         for(let i = 0; i < dotList.length; i++){ //let i = 0 starting value // i < dotList.length condition checked every time the loop is completed // 
@@ -240,7 +236,7 @@ function santaPositionChange(){
 function garrowbyPositionChange(){
     imageList.style.left = ("-2500px");
     imagePosition = 6;
-    imageDescriptionElement.innerText = "Garrowby Hill 1998";
+    imageDescriptionElement.innerText = textDescriptionArray[5];
     displayImagePosition.innerText = imagePosition;
     
     for(let i = 0; i < dotList.length; i++){ //let i = 0 starting value // i < dotList.length condition checked every time the loop is completed // 
