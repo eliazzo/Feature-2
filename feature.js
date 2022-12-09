@@ -1,4 +1,6 @@
-    let imageList = document.getElementById("image-list"); //selects the "image list" ul
+   // global level
+   
+   let imageList = document.getElementById("image-list"); //selects the "image list" ul
 
     const imageListItems = document.querySelectorAll("li");//returns the image-list li items as a list
     const numberOfImageListItems = imageListItems.length; //returns the length of the image-list li items
@@ -14,25 +16,23 @@
     const dotList = document.querySelectorAll(".dots");
     dotList[0].style.backgroundColor = "rgba(0,0,0,0.8)";
  
-    // if (imageList.style.left = 0){
-    //     imagePosition = 1; 
-    // } Thid doesn't work. I am trying to set the initial imagePosition to 1 when the css left property is 0px
-    
-    
+  
+  // make sure to put code in the context of the app when explaining functions
+
     function nextImage(){
         console.log(dotList[0].style);
 
         if(imagePosition < numberOfImageListItems){ // if the imagePosition is less than the numberOfImageListItems
             console.log(imageList.style.left); // console.log the css left property (0px) 
             const newLeft = parseInt(imageList.style.left) - 500 + "px"; // parseInt takes a string as an argument an converts to a number - in this case 0px into 0 // subtracts 500 from 0 // converts back to px
-            imageList.style.left = newLeft; // sets the css left property equal to the newLeft variable value
+            imageList.style.left = newLeft; // sets the left style attribute equal to the newLeft variable value
             console.log(newLeft);
             imagePosition++; //increments (increases) imagePosition with each onclick 
         }
         // Setting the image carousel to automatically return to first image when it reaches the end of the slideshow 
        
-        else{
-            console.log("hello") //if the new css left property is at its limit (-2500px)
+        else{ // when we're at the last image
+            console.log("hello") //if the new left style attribute is at its limit (-2500px)
             const newLeft = ("0px"); // set the  newLeft property variable to it's original, 0px
             imageList.style.left = newLeft; // set the newLeft property variable equal to the css left property 
             imagePosition = 1; // return the imagePosition to 1 (the first image)
@@ -81,7 +81,8 @@
 
                     console.log(dotList[0].style);
 
-                }
+                
+        }
 
 // Previous image function
 
@@ -111,6 +112,7 @@
             }
         }   
 
+//Displaying text description
 
         if(imagePosition === 1){
             imageDescriptionElement.innerText = "A Bigger Splash 1967";
@@ -140,6 +142,7 @@
                  displayImagePosition.innerText = imagePosition // sets innerHTML of "position" p element to imagePosition
         }
     
+        
 
 // // Dots onclick change to respective image 
 
@@ -262,16 +265,15 @@ function garrowbyPositionChange(){
 }
 
 
-
 // Automatic play function 
 
 
-let automaticPlay = setInterval(function(){nextImage()}, 5000); //automatically changes the image every 5 seconds
+let automaticPlay = setInterval(nextImage, 5000); //automatically changes the image every 5 seconds // declared at a higher scope than the functions
 console.log(automaticPlay) // logs the ID which has been assigned to the automaticPlay variable - in this case, 1
     
 // Pause button 
 function pause(){
-        clearInterval(automaticPlay);
+        clearInterval(automaticPlay); // takes the ID as an argument
     
         automaticPlay = null; // removing the setInterval function from the automaticPlay variable and explictly sets this to 0
     }
