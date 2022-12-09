@@ -114,29 +114,51 @@
 
 //Displaying text description
 
-        if(imagePosition === 1){
-            imageDescriptionElement.innerText = "A Bigger Splash 1967";
-            } 
+const textDescriptionArray = ["A Bigger Splash 1967", "Rubber Ring Floating In a Swimming Pool 1971", "Garden #3 2016", "A Lawn Being Sprinkled 1967", "Santa Monica Boulevard 1979", "Garrowby Hill 1998"];
+for (let i=0; i<textDescriptionArray.length; i++){
+    if(imagePosition === 1){
+        imageDescriptionElement.innerText = textDescriptionArray[0];
+        } 
+    if(imagePosition === 2){
+        imageDescriptionElement.innerText = textDescriptionArray[1];
+        }
+    if(imagePosition === 3){
+        imageDescriptionElement.innerText = textDescriptionArray[2];
+        }
+    if(imagePosition === 4){
+        imageDescriptionElement.innerText = textDescriptionArray[3];
+        }
+    if(imagePosition === 5){
+        imageDescriptionElement.innerText = textDescriptionArray[4];
+        }
+    if(imagePosition === 6){
+        imageDescriptionElement.innerText = textDescriptionArray[5];
+        }
+}
 
-        if(imagePosition === 2){
-            imageDescriptionElement.innerText = "Rubber Ring Floating In a Swimming Pool 1971";
-            }
+        // if(imagePosition === 1){
+        //     imageDescriptionElement.innerText = "A Bigger Splash 1967";
+        //     } 
 
-        if(imagePosition === 3){
-            imageDescriptionElement.innerText = "Garden #3 2016";
-            }
+        // if(imagePosition === 2){
+        //     imageDescriptionElement.innerText = "Rubber Ring Floating In a Swimming Pool 1971";
+        //     }
 
-        if(imagePosition === 4){
-            imageDescriptionElement.innerText = "A Lawn Being Sprinkled 1967";
-            }
+        // if(imagePosition === 3){
+        //     imageDescriptionElement.innerText = "Garden #3 2016";
+        //     }
 
-        if(imagePosition === 5){
-            imageDescriptionElement.innerText = "Santa Monica Boulevard 1979";
-            }
+        // if(imagePosition === 4){
+        //     imageDescriptionElement.innerText = "A Lawn Being Sprinkled 1967";
+        //     }
+
+        // if(imagePosition === 5){
+        //     imageDescriptionElement.innerText = "Santa Monica Boulevard 1979";
+        //     }
             
-        if(imagePosition === 6){
-            imageDescriptionElement.innerText = "Garrowby Hill 1998";
-            }
+        // if(imagePosition === 6){
+        //     imageDescriptionElement.innerText = "Garrowby Hill 1998";
+        //     }
 
         //displaying the image position number below the image
                  displayImagePosition.innerText = imagePosition // sets innerHTML of "position" p element to imagePosition
